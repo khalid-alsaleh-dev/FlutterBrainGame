@@ -10,7 +10,7 @@ class Stationery extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      left: (width >= Preakpoints.md) ? 0.18 * width : 0.08 * width,
+      left: (width >= Preakpoints.md) ? 0.18 * width : 0.1 * width,
       bottom: (width >= Preakpoints.md) ? 0.18 * width : 0.25 * width,
       child: Row(
         mainAxisSize: MainAxisSize.min,

@@ -115,7 +115,22 @@ class ScoreDialog extends StatelessWidget {
                               ),
                             ),
                           ),
-                          const Expanded(flex: 2, child: SizedBox()),
+                          Expanded(
+                              flex: 2,
+                              child: FittedBox(
+                                child: CircledButton(
+                                    iconData: Icons.refresh,
+                                    width: widthOfGameDialog,
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                      Driver().restart();
+                                    },
+                                    backgroundColor: GameColors.redAccent,
+                                    hoverColor: GameColors.secondary,
+                                    elevation: 2,
+                                    splashColor: GameColors.green),
+                              )),
+                              const Expanded(flex:1,child: SizedBox())
                         ]),
                   ),
                 ),
@@ -133,23 +148,6 @@ class ScoreDialog extends StatelessWidget {
                     isVectory ? GameAssets.victory : GameAssets.gameOver,
                   ),
                 ),
-                Positioned(
-                    bottom: (widthOfGameDialog >= Preakpoints.md)
-                        ? widthOfGameDialog * 0.003
-                        : widthOfGameDialog * 0.03,
-                    child: Center(
-                      child: CircledButton(
-                          iconData: Icons.refresh,
-                          width: widthOfGameDialog,
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                            Driver().restart();
-                          },
-                          backgroundColor: GameColors.redAccent,
-                          hoverColor: GameColors.secondary,
-                          elevation: 2,
-                          splashColor: GameColors.green),
-                    )),
               ],
             )),
       ),

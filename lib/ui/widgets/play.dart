@@ -65,6 +65,7 @@ class Play extends StatelessWidget {
                 width: widthOfScreen,
                 traingleStateKey: _stateKeysMap[WidgetName.traingleLight],
               ),
+              
               AlarmClock(
                 width: widthOfScreen,
                 key: _stateKeysMap[WidgetName.alarmClock],

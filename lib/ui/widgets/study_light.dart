@@ -15,7 +15,7 @@ class StudyLight extends StatelessWidget {
   Widget build(BuildContext context) {
     return Positioned(
       bottom: (width >= Preakpoints.md) ? 0.26 * width : 0.35 * width,
-      left: (width >= Preakpoints.md) ? 0.13 * width : 0.035 * width,
+      left: (width >= Preakpoints.md) ? 0.126 * width : 0.056 * width,
       child: InkWell(
         onTap: () async {
           (traingleStateKey?.currentState as TraingleLightState).switchLight();

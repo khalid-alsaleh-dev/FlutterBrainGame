@@ -53,7 +53,7 @@ class AlarmClockState extends State<AlarmClock>
           : 0.16 * widget.width,
       bottom: (widget.width >= Preakpoints.md)
           ? 0.4 * widget.width
-          : 0.52 * widget.width,
+          : 0.43 * widget.width,
       child: Container(
           decoration: BoxDecoration(
             boxShadow: [

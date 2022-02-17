@@ -14,7 +14,7 @@ class StudyDesk extends StatelessWidget {
         GameAssets.studyDesk,
         width: (width >= Preakpoints.md)
             ? width - width / 4
-            : width - width * 0.04,
+            : width - width * 0.1,
       ),
     );
   }

@@ -38,21 +38,32 @@ class ScoreState extends State<Score> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: 20,
-      right: 50,
+      top: 15,
+      right: widget.width*0.002,
+      width:widget.width*0.15,
+      height: widget.width*0.1,
       child: Row(
         mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment:MainAxisAlignment.center,
         children: [
-          GetBuilder<GameVariableController>(builder: (gameVariableController) {
-            return Text(gameVariableController.score.toString(),
-                style: const TextStyle(fontSize: 30));
-          }),
-          const Text('/30', style: TextStyle(fontSize: 30)),
-          const SizedBox(width: 10),
-          GestureDetector(
-            onTap: () {
-              flipCoin();
-            },
+          Expanded(
+            flex: 2,
+            child: FittedBox(
+              child: GetBuilder<GameVariableController>(builder: (gameVariableController) {
+                return Text(gameVariableController.score.toString(),
+                textAlign: TextAlign.center,
+                    );
+              }),
+            ),
+          ),
+         const Expanded(
+            flex: 3,
+            child: FittedBox(child: Text('/30' ,  textAlign: TextAlign.end,))),
+          const Expanded(
+            flex: 1,
+            child:  SizedBox()),
+          Expanded(
+            flex: 4,
             child: AnimatedBuilder(
                 animation: _flipCoinAnimaiton,
                 builder: (context, _) {
@@ -61,7 +72,8 @@ class ScoreState extends State<Score> with SingleTickerProviderStateMixin {
                       transform: Matrix4.identity()
                         ..rotateY(2 * pi * _flipCoinAnimaiton.value),
                       child: SvgPicture.asset(GameAssets.coin,
-                          width: 0.035 * widget.width));
+                            // width: 0.035 * widget.width
+                          ));
                 }),
           ),
         ],

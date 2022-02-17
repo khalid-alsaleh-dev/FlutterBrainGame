@@ -48,10 +48,10 @@ class TraingleLightState extends State<TraingleLight>
     return Positioned(
       left: (widget.width >= Preakpoints.md)
           ? widget.width * 0.24
-          : widget.width * 0.17,
+          : widget.width * 0.19,
       bottom: (widget.width >= Preakpoints.md)
           ? widget.width * 0.264
-          : widget.width * 0.36,
+          : widget.width * 0.362,
       child: IgnorePointer(
         child: Transform(
           alignment: Alignment.center,

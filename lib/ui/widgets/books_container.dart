@@ -17,7 +17,7 @@ class BooksContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     Driver().setContext = context;
     return Positioned(
-      bottom: (width >= Preakpoints.md) ? width * 0.26 : width * 0.33,
+      bottom: (width >= Preakpoints.md) ? width * 0.24 : width * 0.30,
       child: SizedBox(
         width: (width >= Preakpoints.md) ? width * 0.4 : width * 0.5,
         child: Row(
