@@ -61,28 +61,24 @@ class _HomeState extends State<Home> {
       quarterTurns: (isPortrait) ? 5 : 0,
       child: Scaffold(
         backgroundColor:GameColors.primary,
-        body: GestureDetector(
-          onTap: () {},
-          child:
-              GetBuilder<GameStateController>(builder: (gameStateController) {
+        body: GetBuilder<GameStateController>(builder: (gameStateController) {
             return SizedBox(
-                width: widthOfGame,
-                height: heightOfGame,
-                child: AnimatedSwitcher(
-                  duration: const Duration(seconds: 1),
-                  switchInCurve: Curves.easeInOut,
-                  transitionBuilder:(child,animation){
-                    return ScaleTransition(scale: animation, child: child);
-                  } ,
-                  child: (gameStateController.state == GameState.start)
-                      ? const Start()
-                      : Play(
-                          widthOfScreen: widthOfGame,
-                          heightOfScreen: heightOfGame,
-                          stateKeysMap: _stateKeysMap),
-                ));
+          width: widthOfGame,
+          height: heightOfGame,
+          child: AnimatedSwitcher(
+            duration: const Duration(seconds: 1),
+            switchInCurve: Curves.easeInOut,
+            transitionBuilder:(child,animation){
+              return ScaleTransition(scale: animation, child: child);
+            } ,
+            child: (gameStateController.state == GameState.start)
+                ? const Start()
+                : Play(
+                    widthOfScreen: widthOfGame,
+                    heightOfScreen: heightOfGame,
+                    stateKeysMap: _stateKeysMap),
+          ));
           }),
-        ),
       ),
     );
   }
