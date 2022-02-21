@@ -5,7 +5,7 @@ import 'package:brain_game/utils/game_assets.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await GameAssets.prereloadAssets();
+  await GameAssets.preloadAssets();
   runApp( MaterialApp(
     theme: ThemeData(
       primaryColor: GameColors.green,
