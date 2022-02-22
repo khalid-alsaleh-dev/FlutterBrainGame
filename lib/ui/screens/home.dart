@@ -58,7 +58,7 @@ class _HomeState extends State<Home> {
     double widthOfGame = (isPortrait) ? heightOfScreen : widthOfScreen;
     double heightOfGame = (isPortrait) ? widthOfScreen : heightOfScreen;
     return RotatedBox(
-      quarterTurns: (isPortrait) ? 5 : 0,
+      quarterTurns: (isPortrait) ? 1 : 0,
       child: Scaffold(
         backgroundColor:GameColors.primary,
         body: GetBuilder<GameStateController>(builder: (gameStateController) {
