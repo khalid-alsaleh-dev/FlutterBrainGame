@@ -14,7 +14,7 @@ class StudyLight extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      bottom: (width >= Preakpoints.md) ? 0.26 * width : 0.35 * width,
+     bottom: (width >= Preakpoints.md) ? 0.26 * width : 0.35 * width,
       left: (width >= Preakpoints.md) ? 0.126 * width : 0.056 * width,
       child: InkWell(
         onTap: () async {

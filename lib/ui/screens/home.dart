@@ -36,7 +36,7 @@ class _HomeState extends State<Home> {
       SwapItemName.firstSwapItem: GlobalKey<BookState>(),
       SwapItemName.secondSwapItem: GlobalKey<BookState>(),
       SwapItemName.thirdSwapItem: GlobalKey<BookState>(),
-      WidgetName.scoure: GlobalKey<ScoreState>(),
+      WidgetName.score: GlobalKey<ScoreState>(),
       WidgetName.traingleLight: GlobalKey<TraingleLightState>(),
       WidgetName.alarmClock: GlobalKey<AlarmClockState>(),
     };

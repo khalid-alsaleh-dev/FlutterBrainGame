@@ -72,7 +72,7 @@ class Play extends StatelessWidget {
               ),
               Score(
                 width: widthOfScreen,
-                key: _stateKeysMap[WidgetName.scoure],
+                key: _stateKeysMap[WidgetName.score],
               )
             ],
           ),

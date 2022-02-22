@@ -74,7 +74,7 @@ class Driver {
         //  the selected item is true => increment the score🎈
         GameVariableController.to.incrementScore();
         // play the flip coin animation
-        (_stateKeysMap[WidgetName.scoure]?.currentState as ScoreState)
+        (_stateKeysMap[WidgetName.score]?.currentState as ScoreState)
             .flipCoin();
         // play the earn coin sound effect
         GameAssets.pool.play(GameAssets.earnCoinsSoundId);
