@@ -61,7 +61,7 @@ class Driver {
           barrierDismissible: false,
           builder: (context) {
             return const ScoreDialog(
-              isvictory: true,
+              isVictory: true,
             );
           });
     }
@@ -90,14 +90,14 @@ class Driver {
           .cancelClock();
 
       int score = GameVariableController.to.score;
-      late bool isvictory;
+      late bool isVictory;
       if (score >= 15) {
-        isvictory = true;
+        isVictory = true;
       } else {
-        isvictory = false;
+        isVictory = false;
       }
       // play the correct sound effect (victory or game over) depending on the score
-      if (isvictory) {
+      if (isVictory) {
         _streamId = await GameAssets.pool.play(GameAssets.victorySoundId);
       } else {
         _streamId = await GameAssets.pool.play(GameAssets.gameOverSoundId);
@@ -108,7 +108,7 @@ class Driver {
           barrierDismissible: false,
           builder: (context) {
             return ScoreDialog(
-              isvictory: isvictory,
+              isVictory: isVictory,
             );
           });
     }
