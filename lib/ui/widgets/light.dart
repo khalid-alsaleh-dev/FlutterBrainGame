@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:brain_game/utils/breakpoints.dart';
 import 'package:brain_game/utils/game_assets.dart';
 
-class TraingleLight extends StatefulWidget {
-  const TraingleLight({Key? key, required this.width}) : super(key: key);
+class Light extends StatefulWidget {
+  const Light({Key? key, required this.width}) : super(key: key);
   final double width;
 
   @override
-  State<TraingleLight> createState() => TraingleLightState();
+  State<Light> createState() => LightState();
 }
 
-class TraingleLightState extends State<TraingleLight>
+class LightState extends State<Light>
     with SingleTickerProviderStateMixin {
   late final AnimationController _animationController;
   late final Animation _colorTween;

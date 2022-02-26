@@ -9,8 +9,8 @@ import 'package:brain_game/utils/game_assets.dart';
 import 'package:brain_game/utils/game_colors.dart';
 
 class ScoreDialog extends StatelessWidget {
-  const ScoreDialog({Key? key, required this.isVectory}) : super(key: key);
-  final bool isVectory;
+  const ScoreDialog({Key? key, required this.isVictory}) : super(key: key);
+  final bool isVictory;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -145,7 +145,7 @@ class ScoreDialog extends StatelessWidget {
                       ? 0.06 * widthOfGameDialog
                       : 0.08 * widthOfGameDialog,
                   child: SvgPicture.asset(
-                    isVectory ? GameAssets.victory : GameAssets.gameOver,
+                    isVictory ? GameAssets.victory : GameAssets.gameOver,
                   ),
                 ),
               ],

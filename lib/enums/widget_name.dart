@@ -1,3 +1,3 @@
 enum WidgetName{
-  score,traingleLight,alarmClock
+  score,light,alarmClock
 }

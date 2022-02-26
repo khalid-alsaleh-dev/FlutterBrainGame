@@ -37,7 +37,7 @@ class _HomeState extends State<Home> {
       SwapItemName.secondSwapItem: GlobalKey<BookState>(),
       SwapItemName.thirdSwapItem: GlobalKey<BookState>(),
       WidgetName.score: GlobalKey<ScoreState>(),
-      WidgetName.traingleLight: GlobalKey<TraingleLightState>(),
+      WidgetName.light: GlobalKey<LightState>(),
       WidgetName.alarmClock: GlobalKey<AlarmClockState>(),
     };
     Driver().setStateKeysMap = _stateKeysMap;

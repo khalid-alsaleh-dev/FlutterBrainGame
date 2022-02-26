@@ -57,13 +57,13 @@ class Play extends StatelessWidget {
                 stateKeysMap: _stateKeysMap,
               ),
               Chair(width: widthOfScreen),
-              TraingleLight(
+              Light(
                 width: widthOfScreen,
-                key: _stateKeysMap[WidgetName.traingleLight],
+                key: _stateKeysMap[WidgetName.light],
               ),
               StudyLight(
                 width: widthOfScreen,
-                traingleStateKey: _stateKeysMap[WidgetName.traingleLight],
+                lightStateKey: _stateKeysMap[WidgetName.light],
               ),
               
               AlarmClock(

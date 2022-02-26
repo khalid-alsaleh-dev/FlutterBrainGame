@@ -6,10 +6,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class StudyLight extends StatelessWidget {
   const StudyLight(
-      {Key? key, required this.width, required this.traingleStateKey})
+      {Key? key, required this.width, required this.lightStateKey})
       : super(key: key);
   final double width;
-  final GlobalKey<State<StatefulWidget>>? traingleStateKey;
+  final GlobalKey<State<StatefulWidget>>? lightStateKey;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class StudyLight extends StatelessWidget {
       left: (width >= Preakpoints.md) ? 0.126 * width : 0.056 * width,
       child: InkWell(
         onTap: () async {
-          (traingleStateKey?.currentState as TraingleLightState).switchLight();
+          (lightStateKey?.currentState as LightState).switchLight();
         },
         child: SvgPicture.asset(
           GameAssets.light,

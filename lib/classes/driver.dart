@@ -61,7 +61,7 @@ class Driver {
           barrierDismissible: false,
           builder: (context) {
             return const ScoreDialog(
-              isVectory: true,
+              isvictory: true,
             );
           });
     }
@@ -90,14 +90,14 @@ class Driver {
           .cancelClock();
 
       int score = GameVariableController.to.score;
-      late bool isVectory;
+      late bool isvictory;
       if (score >= 15) {
-        isVectory = true;
+        isvictory = true;
       } else {
-        isVectory = false;
+        isvictory = false;
       }
-      // play the correct sound effect (vectory or game over) depending on the score
-      if (isVectory) {
+      // play the correct sound effect (victory or game over) depending on the score
+      if (isvictory) {
         _streamId = await GameAssets.pool.play(GameAssets.victorySoundId);
       } else {
         _streamId = await GameAssets.pool.play(GameAssets.gameOverSoundId);
@@ -108,7 +108,7 @@ class Driver {
           barrierDismissible: false,
           builder: (context) {
             return ScoreDialog(
-              isVectory: isVectory,
+              isvictory: isvictory,
             );
           });
     }
@@ -130,7 +130,7 @@ class Driver {
     // start the clock again
     (_stateKeysMap[WidgetName.alarmClock]?.currentState as AlarmClockState)
         .startClock();
-       //  if the user clicked on the restart button before the vectory or game over music finished stop it
+       //  if the user clicked on the restart button before the victory or game over music finished stop it
     await GameAssets.pool.stop(_streamId);
     // restart the background music again
     await GameAssets.backgroundPlayer.seekToNext();
