@@ -37,7 +37,7 @@ class GameAssets {
   static late final AudioPlayer backgroundPlayer;
 
   
-  static Future<void> prereloadAssets() async {
+  static Future<void> preloadAssets() async {
     await _preloadImageAssets();
     await _preloadAudioAssets();
   }
