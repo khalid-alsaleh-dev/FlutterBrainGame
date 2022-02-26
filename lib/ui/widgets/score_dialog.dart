@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:brain_game/classes/driver.dart';
-import 'package:brain_game/controllers/game_variables_controller.dart';
+import 'package:brain_game/controllers/game_score_controller.dart';
 import 'package:brain_game/ui/widgets/circled_button.dart';
 import 'package:brain_game/ui/widgets/stars.dart';
 import 'package:brain_game/utils/breakpoints.dart';
@@ -90,7 +90,7 @@ class ScoreDialog extends StatelessWidget {
                                           flex: 6,
                                           child: FittedBox(
                                             child: Text(
-                                              '${GameVariableController.to.score}/30',
+                                              '${GameScoreController.to.score}/30',
                                               style: const TextStyle(
                                                 fontWeight: FontWeight.bold,
                                                 fontFamily: 'RubikMonoOne',

@@ -13,7 +13,7 @@ import 'package:brain_game/ui/widgets/book.dart';
 import 'package:brain_game/ui/widgets/score.dart';
 import 'package:brain_game/ui/widgets/score_dialog.dart';
 import 'package:brain_game/utils/game_assets.dart';
-import '../controllers/game_variables_controller.dart';
+import '../controllers/game_score_controller.dart';
 
 // singleton class
 class Driver {
@@ -72,7 +72,7 @@ class Driver {
     if (SwapItemsBox().getSelectedSwapItem == label) {
       if (!isFirstSelect) {
         //  the selected item is true => increment the score🎈
-        GameVariableController.to.incrementScore();
+        GameScoreController.to.incrementScore();
         // play the flip coin animation
         (_stateKeysMap[WidgetName.score]?.currentState as ScoreState)
             .flipCoin();
@@ -89,7 +89,7 @@ class Driver {
       (_stateKeysMap[WidgetName.alarmClock]?.currentState as AlarmClockState)
           .cancelClock();
 
-      int score = GameVariableController.to.score;
+      int score = GameScoreController.to.score;
       late bool isVictory;
       if (score >= 15) {
         isVictory = true;
@@ -141,7 +141,7 @@ class Driver {
   set setStateKeysMap(map) => _stateKeysMap = map;
 
   void _cleanGameVariables() {
-    GameVariableController.to.cleanScore();
+    GameScoreController.to.cleanScore();
     _numberOfPlayedLevels = 0;
     _numberOfPlayedRoundsBerLevel = 0;
     _timeInMilliseconds = GameCosntants.startTimeInMilliseconds;
@@ -159,7 +159,7 @@ class Driver {
   }
 
   String get getRank {
-    int score = GameVariableController.to.score;
+    int score = GameScoreController.to.score;
     if (score < 5) {
       return GameCosntants.ranks[0];
     } else if (score >= 5 && score < 10) {
@@ -176,7 +176,7 @@ class Driver {
   }
 
   int get getNumberOfStars {
-    int score = GameVariableController.to.score;
+    int score = GameScoreController.to.score;
     if (score < 10) {
       return 0;
     }

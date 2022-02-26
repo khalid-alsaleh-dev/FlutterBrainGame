@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:brain_game/controllers/game_variables_controller.dart';
+import 'package:brain_game/controllers/game_score_controller.dart';
 import 'package:get/get.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:brain_game/utils/game_assets.dart';
@@ -49,7 +49,7 @@ class ScoreState extends State<Score> with SingleTickerProviderStateMixin {
           Expanded(
             flex: 2,
             child: FittedBox(
-              child: GetBuilder<GameVariableController>(builder: (gameVariableController) {
+              child: GetBuilder<GameScoreController>(builder: (gameVariableController) {
                 return Text(gameVariableController.score.toString(),
                 textAlign: TextAlign.center,
                     );

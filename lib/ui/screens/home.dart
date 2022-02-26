@@ -6,7 +6,7 @@ import 'package:brain_game/enums/game_state.dart';
 import 'package:brain_game/enums/swap_item_name.dart';
 import 'package:brain_game/enums/widget_name.dart';
 import 'package:brain_game/controllers/game_state_controller.dart';
-import 'package:brain_game/controllers/game_variables_controller.dart';
+import 'package:brain_game/controllers/game_score_controller.dart';
 import 'package:brain_game/ui/widgets/alram_clock.dart';
 import 'package:brain_game/ui/widgets/book.dart';
 import 'package:brain_game/ui/widgets/light.dart';
@@ -30,7 +30,7 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     super.initState();
-    Get.put<GameVariableController>(GameVariableController());
+    Get.put<GameScoreController>(GameScoreController());
     Get.put<GameStateController>(GameStateController());
     _stateKeysMap = {
       SwapItemName.firstSwapItem: GlobalKey<BookState>(),

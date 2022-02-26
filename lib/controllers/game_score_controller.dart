@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class GameVariableController extends GetxController {
+class GameScoreController extends GetxController {
   int score = 0;
   void incrementScore() {
     score++;
@@ -12,5 +12,5 @@ class GameVariableController extends GetxController {
     update();
   }
 
-  static GameVariableController get to => Get.find<GameVariableController>();
+  static GameScoreController get to => Get.find<GameScoreController>();
 }
