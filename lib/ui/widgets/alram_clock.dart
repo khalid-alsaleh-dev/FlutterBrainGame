@@ -34,6 +34,7 @@ class AlarmClockState extends State<AlarmClock>
 
   void cancelClock() {
     _timer?.cancel();
+     _seconds.value=0;
   }
 
   void startClock() =>
@@ -103,7 +104,7 @@ class SecondsHandPainter extends CustomPainter {
     Paint paint = Paint()
       ..color = Colors.red
       ..style = PaintingStyle.fill
-      ..strokeWidth = 3;
+      ..strokeWidth = size.width/30;
     Offset startPoint = Offset(size.width / 2, size.height / 2);
     Offset endPoint = Offset(size.width - size.width * 0.24, size.height / 2);
     canvas.drawLine(startPoint, endPoint, paint);
